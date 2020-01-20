@@ -1,6 +1,6 @@
 <template>
-  <div class="hello">
-    <button>我是just-button</button>
+  <div>
+    <button @click="handleClick">{{ text }}</button>
   </div>
 </template>
 
@@ -8,12 +8,19 @@
 export default {
   name: 'JustButton',
   props: {
-    msg: String,
+    text: {
+      type: String,
+      default: '',
+    },
   },
   data: function() {
     return {};
   },
-  methods: {},
+  methods: {
+    handleClick(evt) {
+      this.$emit('click', evt);
+    },
+  },
 };
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

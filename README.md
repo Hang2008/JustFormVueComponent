@@ -1,47 +1,39 @@
-# hello-world2
-
-## 公开课自己写vue插件并上传npm
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-## Plugin
+# Plugin
 
 ### Build
+
 ```
 npm run lib
 ```
+
 ### publish
+
 ```
 npm login
 ```
+
 #### enter your username and password
+
 ```
 npm publish
 ```
 
+#使用
+
+```
+npm install just-wy-components
+```
+
+```javascript
+//main.js
+
+import justwy from 'just-wy-components';
+import '../node_modules/just-wy-components/dist/just-wy-components.css';
+Vue.use(justwy);
+```
+
+# TODO
+
+当前只支持全局引用
+当前打包出来 css 文件虽然在库中，但是使用者还需要自己引用
+当前组件都打包到了一个文件中，例如 button，message，将来需要分开打包

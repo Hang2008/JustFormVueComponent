@@ -13,6 +13,10 @@ export default {
   name: 'JustMessage',
   props: {
     msg: String,
+    what: {
+      type: Number,
+      require: true,
+    },
   },
   data: function() {
     return {

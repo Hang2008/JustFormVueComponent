@@ -22,6 +22,7 @@ export default {
   },
   methods: {
     submit() {
+      // this.$msgMethod();
       if (!this.name) {
         this.$refs.msg.show('1请输入名字');
       }
